@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form class="form clearfix" [formGroup]="loginForm">
+            <div class="form-group">
+                <div [ngClass]="{'error': loginForm.controls['email'].errors && !loginForm.controls['email'].pristine}">
+                    <label for="email" class="col-form-label required">Email</label>
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Your Email" required="" formControlName="email">
+                    <div *ngIf="loginForm.controls['email'].errors && !loginForm.controls['email'].pristine" class="error-msg">
+                      <div [hidden]="!loginForm.controls['email'].errors.required">Email is required.</div>
+                      <div [hidden]="!loginForm.controls['email'].errors.patternInvalid">Email is invalid.</div>
+                    </div>
+                </div>
+            </div>
+            <!--end form-group-->
+            <div class="form-group">
+                <div [ngClass]="{'error': loginForm.controls['password'].errors && !loginForm.controls['password'].pristine}">
+                    <label for="password" class="col-form-label required">Mật khẩu</label>
+                    <input name="password" type="password" class="form-control" id="password" placeholder="Password" required="" formControlName="password">
+                    <div *ngIf="loginForm.controls['password'].errors && !loginForm.controls['password'].pristine" class="error-msg">
+                      <div [hidden]="!loginForm.controls['password'].errors.required">Password is required.</div>
+                    </div>
+                </div>
+            </div>
+            <!--end form-group-->
+            <div class="d-flex justify-content-between align-items-baseline">
+                <label>
+                    <input type="checkbox" formControlName="remember" value="1" name="remember" >
+                    Ghi nhớ
+                </label>
+                <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid" (click)="login()">Đăng nhập</button>
+            </div>
+        </form>
+        <hr>
+        <p>
+            Có vấn đề khi đăng nhập? <a href="#" class="link">Click here.</a>
+        </p>
+    </div>
+    <!--end col-md-6-->
+</div>
