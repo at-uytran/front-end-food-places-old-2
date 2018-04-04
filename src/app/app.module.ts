@@ -4,6 +4,9 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
+// import service
+import { UsersService } from './services/users.service';
+
 //import router AppRoutingModule
 import { AppRoutingModule } from './app-routing.module';
 import { CookieModule } from 'ngx-cookie';
@@ -32,9 +35,10 @@ import { LoadingComponent } from './loading/loading.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    CookieModule.forRoot()
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
