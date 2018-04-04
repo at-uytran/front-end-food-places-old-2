@@ -19,7 +19,6 @@ import { StaticPageComponent } from './static-page/static-page.component';
 import { LoginComponent } from './login/login.component';
 import { LoadingComponent } from './loading/loading.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

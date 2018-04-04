@@ -12,7 +12,7 @@
                     </li>
                 </ul>
                 <!--end left-->
-                <ul class="right">
+                <ul class="right" *ngIf="!loggedIn">
                     <li>
                         <a [routerLink]="['/login']">
                             <i class="fa fa-sign-in"></i>Đăng nhập
@@ -21,6 +21,13 @@
                     <li>
                         <a href="./register.html">
                             <i class="fa fa-pencil-square-o"></i>Đăng ký
+                        </a>
+                    </li>
+                </ul>
+                <ul class="right" *ngIf="loggedIn">
+                    <li>
+                        <a (click)="logout()">
+                            <i class="fa fa-sign-out"></i>Đăng xuất
                         </a>
                     </li>
                 </ul>
