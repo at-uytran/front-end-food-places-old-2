@@ -1,0 +1,7 @@
+.image-wrapper img {
+  max-width: 250px;
+}
+
+.image-wrapper {
+  min-height: 150px;
+}

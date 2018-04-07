@@ -774,7 +774,7 @@ Headers:		'Varela Round', sans-serif;
 }
 /*------ Image ------*/
 .items:not(.selectize-input) .item .image {
-    height: 26rem;
+    height: 22rem;
     position: relative;
     border-top-left-radius: .6rem;
     border-top-right-radius: .6rem;
@@ -787,7 +787,7 @@ Headers:		'Varela Round', sans-serif;
     z-index: 0;
 }
 .items:not(.selectize-input) .item .image .image-wrapper:before {
-    opacity: .8;
+    opacity: .2;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -863,7 +863,7 @@ Headers:		'Varela Round', sans-serif;
     z-index: 1;
     left: 1.8rem;
     color: white;
-    top: 20rem;
+    top: 16rem;
     font-weight: 300;
     font-size: 1.4rem;
     opacity: .8;
@@ -885,7 +885,7 @@ Headers:		'Varela Round', sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
     position: absolute;
-    top: 22.6rem;
+    top: 18.6rem;
     left: 1.8rem;
     padding: .5rem 1.8rem;
     border-top-left-radius: .3rem;
@@ -904,7 +904,7 @@ Headers:		'Varela Round', sans-serif;
 /*------ Meta ------*/
 .items:not(.selectize-input) .item .meta {
     background-color: #f8f8f8;
-    padding: 1.8rem;
+    padding: 0.8rem;
     font-size: 1.2rem;
     width: 100%;
     white-space: nowrap;
