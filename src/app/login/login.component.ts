@@ -3,6 +3,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { patternValidator } from '../shared/pattern-validator';
 import { CookieService } from 'ngx-cookie';
 import { UsersService } from '../services/users.service'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
 
   constructor(private cookie: CookieService,
-              private usersService: UsersService) { }
+              private usersService: UsersService,
+              private router: Router) { }
 
   ngOnInit() {
     this.loading = false;
@@ -35,16 +37,15 @@ export class LoginComponent implements OnInit {
     console.log("logining");
     this.usersService.login(this.loginForm.value).subscribe(
       data => {
-        console.log(data);
-        console.log("login");
-        let auth_token = data.headers.get('authorization');
+        this.loading = false;
+        let auth_token = data.headers.get('Authorization');
         localStorage.setItem('auth-token', auth_token)
         localStorage.setItem('current-user', JSON.stringify(data.json()));
+        window.location.href = '/';
       },
       error => {
         console.log("invalid");
       }
     );
-    console.log(this.loginForm.value);
   }
 }

@@ -15,7 +15,15 @@ export class UsersService {
   constructor(private http: Http) { }
 
   login(obj: any) {
-    return this.http.post(SERVER_URL + '/sessions', obj).map(res => res.json());
+    return this.http.post(SERVER_URL + 'sessions', obj).map(res => res);
+  }
+
+  logout(id: any) {
+    return this.http.delete(SERVER_URL+'sessions/'+id, {headers: this.setHeaders()}).map((res) => res);
+  }
+
+  getUser(id: any) {
+    return this.http.patch(SERVER_URL+'sessions/'+id, {}, {headers: this.setHeaders()}).map(res => res);
   }
 
   setHeaders() :any{
