@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
         window.location.href = '/';
       },
       error => {
+        console.log(error);
         console.log("invalid");
       }
     );
