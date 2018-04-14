@@ -1,0 +1,31 @@
+.image-place-details {
+  max-width: 100%;
+}
+
+.place-name {
+  color: green;
+}
+
+.place .place-description {
+    padding-top: 1rem;
+    margin-left: 1rem;
+}
+.place.big {
+    padding-bottom: 1rem;
+}
+
+.place.big .place-description .additional-info ul li {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+.place.big .place-description .additional-info ul li figure {
+    float: none;
+    padding: 3px;
+    margin: 3px;
+}
+
+.place-main-info .additional-info {
+  padding-top: 1rem;
+}
+

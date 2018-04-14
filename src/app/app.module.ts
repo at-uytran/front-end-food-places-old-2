@@ -21,6 +21,12 @@ import { LoginComponent } from './login/login.component';
 import { LoadingComponent } from './loading/loading.component';
 import { PlacesComponent } from './places/places.component';
 import { PlaceDetailsComponent } from './place-details/place-details.component';
+import { PlaceImagePipe } from './shared/place-image.pipe';
+import { PlaceCommentsComponent } from './place-comments/place-comments.component';
+import { PlaceSpecsComponent } from './place-details/place-specs/place-specs.component';
+
+// import angular google maps
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,10 @@ import { PlaceDetailsComponent } from './place-details/place-details.component';
     LoginComponent,
     LoadingComponent,
     PlacesComponent,
-    PlaceDetailsComponent
+    PlaceDetailsComponent,
+    PlaceImagePipe,
+    PlaceCommentsComponent,
+    PlaceSpecsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +49,10 @@ import { PlaceDetailsComponent } from './place-details/place-details.component';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    CookieModule.forRoot()
+    CookieModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDTA6W73R5Kmr-i5At5jFi8kW5tqhPN6D4'
+    }),
   ],
   providers: [
     UsersService,

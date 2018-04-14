@@ -1,0 +1,113 @@
+<!--Gallery Carousel-->
+                    <!--end Gallery Carousel-->
+                    <!--Description-->
+                    <section>
+                        <h2>Mô tả địa điểm</h2>
+                    </section>
+                    <!--end Description-->
+                    <!--Details & Location-->
+                    <section>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <h2>Thông tin địa điêm</h2>
+                                <dl>
+                                    <dt>Date Added</dt>
+                                    <dd>05.04.2017</dd>
+                                    <dt>Type</dt>
+                                    <dd>Offer</dd>
+                                    <dt>Status</dt>
+                                    <dd>Used</dd>
+                                    <dt>First Owner</dt>
+                                    <dd>Yes</dd>
+                                    <dt>Material</dt>
+                                    <dd>Wood, Leather</dd>
+                                    <dt>Color</dt>
+                                    <dd>White, Grey</dd>
+                                    <dt>Height</dt>
+                                    <dd>47cm</dd>
+                                    <dt>Width</dt>
+                                    <dd>203cm</dd>
+                                    <dt>Length</dt>
+                                    <dd>54cm</dd>
+                                </dl>
+                            </div>
+                            <div class="col-md-8">
+                                <h2>Location</h2>
+                                <agm-map [latitude]="lat" [longitude]="lng">
+                                </agm-map>
+                            </div>
+                        </div>
+                    </section>
+                    <!--end Details and Locations-->
+                    <!--Features-->
+                    <section>
+                        <h2>Features</h2>
+                        <ul class="features-checkboxes columns-3">
+                            <li>Quality Wood</li>
+                            <li>Brushed Alluminium Handles</li>
+                            <li>Foam mattress</li>
+                            <li>Detachable chaise section</li>
+                            <li>3 fold pull out mechanism</li>
+                        </ul>
+                    </section>
+                    <!--end Features-->
+                    <!--Author-->
+                    <section>
+                        <h2>Author</h2>
+                        <div class="box">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="author">
+                                        <div class="author-image">
+                                            <div class="background-image">
+                                                <img src="./assets/img/author-01.jpg" alt="" >
+                                            </div>
+                                        </div>
+                                        <!--end author-image-->
+                                        <div class="author-description">
+                                            <h3>Jane Doe</h3>
+                                            <div class="rating" data-rating="4"></div>
+                                            <a href="./seller-detail-1.html" class="text-uppercase">Show My Listings
+                                                <span class="appendix">(12)</span>
+                                            </a>
+                                        </div>
+                                        <!--end author-description-->
+                                    </div>
+                                    <hr >
+                                    <dl>
+                                        <dt>Phone</dt>
+                                        <dd>830-247-0930</dd>
+                                        <dt>Email</dt>
+                                        <dd>hijane@example.com</dd>
+                                    </dl>
+                                    <!--end author-->
+                                </div>
+                                <!--end col-md-5-->
+                                <div class="col-md-7">
+                                    <form class="form email" >
+                                        <div class="form-group">
+                                            <label for="name" class="col-form-label">Name</label>
+                                            <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" >
+                                        </div>
+                                        <!--end form-group-->
+                                        <div class="form-group">
+                                            <label for="email" class="col-form-label">Email</label>
+                                            <input name="email" type="email" class="form-control" id="email" placeholder="Your Email" >
+                                        </div>
+                                        <!--end form-group-->
+                                        <div class="form-group">
+                                            <label for="message" class="col-form-label">Message</label>
+                                            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Hi there! I am interested in your offer ID 53951. Please give me more details."></textarea>
+                                        </div>
+                                        <!--end form-group-->
+                                        <button type="submit" class="btn btn-primary">Send</button>
+                                    </form>
+                                </div>
+                                <!--end col-md-7-->
+                            </div>
+                            <!--end row-->
+                        </div>
+                        <!--end box-->
+                    </section>
+                    <!--End Author-->
+

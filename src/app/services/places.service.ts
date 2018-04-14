@@ -18,4 +18,8 @@ export class PlacesService {
   index() {
     return this.http.get(SERVER_URL+'places').map(res=> res.json());
   }
+
+  show(id) {
+    return this.http.get(SERVER_URL+'places/'+id).map(res=> res.json());
+  }
 }
