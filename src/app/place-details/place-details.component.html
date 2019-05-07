@@ -1,3 +1,123 @@
-<p>
-  place-details works!
-</p>
+<section class="block">
+    <div class="container">
+      <div class="box">
+        <div class="row" *ngIf="place">
+            <!--============ Listing Detail =============================================================-->
+            <div class="row">
+
+                <div class="col-md-4">
+                    <section class="place-image">
+                        <!--end section-title-->
+                        <div class="gallery-carousel owl-carousel">
+                            <img src="{{place.image_url | placeImage}}" alt="" class="image-place-details" >
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-8">
+                    <section class="place-main-info">
+                        <!--end section-title-->
+                        <div class="additional-info">
+                            <section class="my-0">
+                                <div class="place big">
+                                    <!--end author-image-->
+                                    <div class="place-description">
+                                        <div class="section-title">
+                                            <div class="place-name">
+                                                <h2>{{place.name}}</h2>
+                                            </div>
+                                            <h4 class="location">
+                                                <a href="#">{{place.address}}</a>
+                                            </h4>
+                                            <figure>
+                                                <div class="float-left">
+                                                    <div class="rating" data-rating="4"></div>
+                                                </div>
+                                                <div class="text-align-right social">
+                                                    <a href="#">
+                                                        <i class="fa fa-facebook-square"></i>
+                                                    </a>
+                                                    <a href="#">
+                                                        <i class="fa fa-twitter-square"></i>
+                                                    </a>
+                                                    <a href="#">
+                                                        <i class="fa fa-instagram"></i>
+                                                    </a>
+                                                </div>
+                                            </figure>
+                                        </div>
+                                        <div class="additional-info box">
+                                            <ul>
+                                                <li>
+                                                    <figure>Phone</figure>
+                                                    <aside>+1 516-480-4273</aside>
+                                                </li>
+                                                <li>
+                                                    <figure>Email</figure>
+                                                    <aside><a href="#">{{place.owner_email}}</a></aside>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!--end addition-info-->
+                                        <div class="additional-info box">
+                                            <h3>Mô tả địa điểm: </h3>
+                                            <p>
+                                                {{place.descriptions}}
+                                            </p>
+                                            <dl>
+                                                <dt>Phí ship</dt>
+                                                <dd>{{place.ship_price | currency: "VND"}}</dd>
+                                                <dt>
+                                                    Giờ mở cửa
+                                                </dt>
+                                                <dd>{{place.open_time | date:"HH:mm"}} - {{place.close_time | date:"HH:mm"}}</dd>
+                                                <dt>Khoảng gía</dt>
+                                                <dd>{{place.price_range}}</dd>
+                                                <dt>Đánh gía</dt>
+                                                <dd>{{place.rating_average}}</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                    <!--end author-description-->
+                                </div>
+                                <!--end author-->
+                            </section>
+                        </div>
+                    </section>
+                </div>
+            </div>
+             <div class="col-md-9">
+                <h2>Pills</h2>
+                <ul class="nav nav-pills" id="myTab-pills" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="one-tab-pills" data-toggle="tab" href="#one-pills" role="tab" aria-controls="one-pills" aria-expanded="true">Thông tin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="two-tab-pills" data-toggle="tab" href="#two-pills" role="tab" aria-controls="two-pills">Các món ăn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="three-tab-pills" data-toggle="tab" href="#three-pills" role="tab" aria-controls="three-pills">Bản đồ</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent-pills">
+                    <div class="tab-pane fade show active" id="one-pills" role="tabpanel" aria-labelledby="one-tab-pills">
+                        <app-place-specs></app-place-specs>
+                    </div>
+                    <div class="tab-pane fade" id="two-pills" role="tabpanel" aria-labelledby="two-tab-pills">
+                        Ut eleifend placerat pretium. Integer eros purus, malesuada sit amet justo vel, luctus elementum leo. Sed hendrerit suscipit enim, vitae laoreet justo mattis id. Etiam vel massa euismod, congue diam sit amet, rutrum sem. Fusce tempor, velit vitae aliquet varius, mi eros pulvinar lorem, et posuere diam dolor quis sem. Integer rutrum fringilla risus, eget hendrerit nunc finibus ac. Duis eu sapien quis lorem pharetra suscipit finibus commodo risus. Aenean eget felis vel mauris elementum laoreet ac nec neque. Aenean congue augue in leo vulputate pulvinar. Donec eget massa posuere, sagittis enim laoreet, commodo elit. Fusce vitae pretium justo. Donec fermentum tellus non tempus faucibus. Donec finibus, diam quis pretium tincidunt, elit sapien iaculis dolor, id laoreet nisl erat in ex. Aenean dictum eget sapien eu gravida. Nulla congue ex a quam dictum, at venenatis nisl elementum.
+                    </div>
+                    <div class="tab-pane fade" id="three-pills" role="tabpanel" aria-labelledby="three-tab-pills">
+                        Maecenas mollis maximus dapibus. Nulla ex magna, malesuada non imperdiet sed, ultrices quis purus. Duis condimentum accumsan bibendum. In consequat lorem et nulla efficitur vulputate ut non ante. Pellentesque vel pulvinar lectus. Suspendisse gravida leo non mi porttitor consectetur. Suspendisse dapibus, lacus vel accumsan ultrices, lorem nisi scelerisque magna, vitae laoreet enim diam sed nisl. Ut ut augue facilisis, tristique nisi eget, aliquam metus. Integer porttitor facilisis metus eu hendrerit. Nam et nunc id risus fringilla volutpat et non metus. Integer in velit et erat dictum congue. Nam iaculis augue non ex tristique volutpat.
+                    </div>
+                </div>
+            </div>
+
+            <!--============ End Listing Detail =========================================================-->
+            <!--============ Sidebar ====================================================================-->
+
+            <!--============ End Sidebar ================================================================-->
+        </div>
+      </div>
+    </div>
+    <!--end container-->
+</section>
+<!--end block-->
